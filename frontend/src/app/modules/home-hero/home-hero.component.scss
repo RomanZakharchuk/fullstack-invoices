@@ -1,0 +1,67 @@
+@use "src/styles/variables";
+@use "src/styles/mixins";
+
+section {
+   display: flex;
+   flex-direction: column;
+   padding-top: 55px;
+}
+
+.hero-banner {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   padding: 0 40px 55px 50px;
+
+   h1 {
+      font-weight: variables.$bold;
+      font-size: variables.$font-size-h1;
+      line-height: variables.$line-height-h1;
+      color: var(--main-title);
+      margin-bottom: 32px;
+   }
+
+   a {
+      @include mixins.home-button();
+      margin: 32px 0;
+   }
+
+   p {
+      font-weight: variables.$regular;
+      font-size: variables.$font-size-h4;
+      line-height: variables.$line-height-h4;
+      color: var(--main-text);
+   }
+}
+
+.banner-wrapper {
+   line-height: 0;
+}
+
+@media all and (min-width: variables.$screen-lg) {
+   section {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 55px 0;
+   }
+
+   .hero-banner {
+      padding-bottom: 0;
+      width: 50%;
+   }
+
+   .banner-wrapper {
+      width: 50%;
+   }
+}
+
+@media all and (min-width: variables.$screen-xl) {
+   .hero-banner {
+      width: 40%;
+   }
+
+   .banner-wrapper {
+      width: 60%;
+   }
+}

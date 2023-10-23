@@ -1,0 +1,36 @@
+<div class="invoices-container">
+   <div class="header">
+      <div>
+         <h1 class="invoice-title">Invoices</h1>
+         <span class="invoice-count">There are invoices.length invoices</span>
+      </div>
+
+      <div class="d-flex align-items-center gap-4">
+         <div>
+            <button class="btn-filter" #t="matMenuTrigger" [matMenuTriggerFor]="menu">
+               <span>Filter by status</span>
+               <img [ngClass]="{'arrow-down': t.menuOpen}" class="arrow" src="../../../assets/icons/Arrow-down.svg"
+                  alt="arrow">
+
+            </button>
+            <mat-menu #menu="matMenu">
+               <mat-radio-group aria-labelledby="radio-group-label" class="radio-group-label"
+                  [(ngModel)]="filterByStatus">
+
+                  <mat-radio-button [color]="'primary'" class="filter-by-status" *ngFor="let status of statuses"
+                     [value]="status">
+                     {{status}}
+                  </mat-radio-button>
+
+               </mat-radio-group>
+            </mat-menu>
+         </div>
+
+         <div>
+            <button class="btn-add-new-invoice">
+               New Invoice
+            </button>
+         </div>
+      </div>
+   </div>
+</div>

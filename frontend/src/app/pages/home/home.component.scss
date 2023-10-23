@@ -1,0 +1,11 @@
+@use "src/styles/mixins";
+
+main {
+  margin-top: 102px;
+}
+
+.container {
+  @include mixins.container();
+  padding-top: 0;
+  padding-bottom: 0;
+}

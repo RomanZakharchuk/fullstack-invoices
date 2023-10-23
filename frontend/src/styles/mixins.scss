@@ -1,0 +1,58 @@
+@use "src/styles/variables";
+
+@mixin box-shadow() {
+   box-shadow: 0 10px 10px -10px rgba(72, 84, 159, 0.100397);
+}
+
+@mixin box-shadow-select() {
+   box-shadow: 0 10px 20px rgba(72, 84, 159, 0.25);
+}
+
+@mixin home-button() {
+   display: inline-block;
+   font-weight: variables.$bold;
+   font-size: variables.$font-size-h5;
+   line-height: variables.$line-height-h5;
+   padding: 15px 24px;
+   border-radius: 6px;
+   cursor: pointer;
+   background: var(--main-dark-green);
+   border: 2px solid var(--main-dark-green);
+   color: var(--main-white);
+   text-transform: uppercase;
+   transition: variables.$transition;
+
+   &:hover {
+      background: var(--main-white);
+      color: var(--main-dark-green);
+      transition: variables.$transition;
+   }
+}
+
+@mixin button() {
+   display: inline-block;
+   font-weight: variables.$bold;
+   font-size: variables.$font-size-h5;
+   line-height: variables.$line-height-h5;
+   padding: 12px 24px;
+   border-radius: 6px;
+   cursor: pointer;
+   background: var(--main-dark-green);
+   border: 2px solid var(--main-dark-green);
+   color: var(--main-white);
+   text-transform: uppercase;
+   transition: variables.$transition;
+
+   &:hover {
+      background: var(--main-white);
+      color: var(--main-dark-green);
+      transition: variables.$transition;
+   }
+}
+
+@mixin container() {
+   width: 100%;
+   max-width: 1920px;
+   margin: 0 auto;
+   padding: 15px;
+}

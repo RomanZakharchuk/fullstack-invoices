@@ -1,0 +1,14 @@
+@use "src/styles/variables";
+
+.dashboard {
+   height: 100vh;
+   background: var(--background-main);
+   overflow: hidden;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+
+   @media all and (min-width: variables.$screen-lg) {
+      flex-direction: row;
+   }
+}

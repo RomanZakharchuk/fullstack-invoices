@@ -1,0 +1,12 @@
+<section>
+  <div class="home-intro-wrapper">
+    <h2 class="title">The Easiest Invoicing Software You’ll Ever Use</h2>
+
+    <div class="cards-wrapper">
+      <ng-container *ngFor="let card of introContent">
+        <home-intro-card [icon]="card.icon" [title]="card.title" [text]="card.text">
+        </home-intro-card>
+      </ng-container>
+    </div>
+  </div>
+</section>

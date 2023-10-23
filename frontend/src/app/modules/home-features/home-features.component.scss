@@ -1,0 +1,7 @@
+@use "src/styles/variables";
+
+@media all and (min-width: variables.$screen-lg) {
+   section {
+      margin-top: 200px;
+   }
+}

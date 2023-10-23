@@ -1,0 +1,21 @@
+<div *ngIf="side === 'left'" class="features-card left">
+  <div class="image-wrapper">
+    <img [src]="image" alt="image">
+  </div>
+
+  <div class="text-wrapper">
+    <h3>{{title}}</h3>
+    <p>{{text}}</p>
+  </div>
+</div>
+
+<div *ngIf="side === 'right'" class="features-card">
+  <div class="text-wrapper">
+    <h3>{{title}}</h3>
+    <p>{{text}}</p>
+  </div>
+
+  <div class="image-wrapper">
+    <img [src]="image" alt="image">
+  </div>
+</div>

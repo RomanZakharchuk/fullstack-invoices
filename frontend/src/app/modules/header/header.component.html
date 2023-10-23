@@ -1,0 +1,27 @@
+<div class="header">
+    <a routerLink="/home" class="logo-link">
+        <img src="assets/icons/Logo-invoices.svg" />
+    </a>
+
+    <div class="navbar-users">
+        <!-- <button class="log-out-btn">Log out</button> -->
+
+        <button class="toggle-theme" (click)="onThemeSwitchChange()">
+            <ng-container *ngIf="isLightTheme">
+                <img src="assets/icons/theme-light.svg" alt="light">
+            </ng-container>
+
+            <ng-container *ngIf="!isLightTheme">
+                <img src="assets/icons/theme-dark.svg" alt="dark">
+            </ng-container>
+        </button>
+
+        <div class="line"></div>
+
+        <div class="avatar-icon-wrapper">
+            <div>
+                <!-- <img src="{UserIcon}" alt="user icon" /> -->
+            </div>
+        </div>
+    </div>
+</div>
